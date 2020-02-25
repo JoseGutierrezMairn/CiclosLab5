@@ -15,7 +15,8 @@ import edu.eci.cvsd.servlet.Model.Todo;
 @WebServlet(urlPatterns = "/holaServlet")
 
 public class Prueba extends HttpServlet {
-	
+
+	private static final long serialVersionUID = 40L;
 	private Todo Porhacer;
 	private ArrayList<Todo> Lista=new ArrayList<Todo>();
 	
@@ -27,7 +28,7 @@ public class Prueba extends HttpServlet {
 			Porhacer=Service.getTodo(Integer.parseInt(id));
 			Lista.add(Porhacer);
 			resp.setStatus(HttpServletResponse.SC_OK);
-		    responseWriter.write(Porhacer.getTitle()/*Integer.toString(Porhacer.getUserId())*/);
+		    responseWriter.write(Service.todosToHTMLTable(Lista));
 		    responseWriter.flush();
 		}
 		catch(NullPointerException e) {

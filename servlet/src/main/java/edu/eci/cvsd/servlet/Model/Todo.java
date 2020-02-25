@@ -2,41 +2,34 @@ package edu.eci.cvsd.servlet.Model;
 
 public class Todo {
 	
-	private int Id;
-	private int UserId;
-	private String Title;
-	private Boolean Completed;
-	
-	public int getUserId() {
-		return UserId;
-	}
-
-	public void setUserId(int userId) {
-		UserId = userId;
-	}
-
-	public String getTitle() {
-		return Title;
-	}
-
-	public void setTitle(String title) {
-		Title = title;
-	}
-
-	public Boolean getCompleted() {
-		return Completed;
-	}
-
-	public void setCompleted(Boolean completed) {
-		Completed = completed;
-	}
-
-	public Todo() {}
+	private int id;
+	private int userId;
+	private String title;
+	private Boolean completed;
 	
 	public int getId() {
-		return Id;
+		return id;
 	}
 	public void setId(int id) {
-		Id = id;
+		this.id = id;
 	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public Boolean getCompleted() {
+		return completed;
+	}
+	public void setCompleted(Boolean completed) {
+		this.completed = completed;
+	}
+	
 }
